@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Users\\user\\Documents\\WPFW_herkansing_2022\\Opdracht week 1\\Opdracht week 1.csproj": {}
+    "d:\\Users\\user\\Documents\\WPFW_portfolio\\Opdracht_week_1\\Opdracht week 1.csproj": {}
   },
   "projects": {
-    "d:\\Users\\user\\Documents\\WPFW_herkansing_2022\\Opdracht week 1\\Opdracht week 1.csproj": {
+    "d:\\Users\\user\\Documents\\WPFW_portfolio\\Opdracht_week_1\\Opdracht week 1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Users\\user\\Documents\\WPFW_herkansing_2022\\Opdracht week 1\\Opdracht week 1.csproj",
+        "projectUniqueName": "d:\\Users\\user\\Documents\\WPFW_portfolio\\Opdracht_week_1\\Opdracht week 1.csproj",
         "projectName": "Opdracht week 1",
-        "projectPath": "d:\\Users\\user\\Documents\\WPFW_herkansing_2022\\Opdracht week 1\\Opdracht week 1.csproj",
+        "projectPath": "d:\\Users\\user\\Documents\\WPFW_portfolio\\Opdracht_week_1\\Opdracht week 1.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "d:\\Users\\user\\Documents\\WPFW_herkansing_2022\\Opdracht week 1\\obj\\",
+        "outputPath": "d:\\Users\\user\\Documents\\WPFW_portfolio\\Opdracht_week_1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

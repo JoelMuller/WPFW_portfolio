@@ -8,29 +8,26 @@
         {
             x = getal1;
             y = getal2;
-
         }
     }
     //even vragen wat dit nou in de UML betekent
-    public void operator +(Coordinaat a, Coordinaat b) : Coordinaat{
-
-    }
+    // public void iets (Coordinaat a, Coordinaat b) : Coordinaat{    }
 }
 
 interface Tekener
 {
     // even kijken wat ik in de interfaces moet zetten
-    //public Teken;
+    public void Teken(Tekenbaar T);
 }
 
 interface Tekenbaar
 {
-    //public ConsoleTekener tekenConsole;
+    public void TekenConsole(ConsoleTekener T);
 }
 
 class ConsoleTekener
 {
-    protected static void SchrijfOp(Coordinaat Positie, string Text)
+    public void SchrijfOp(Coordinaat Positie, string Text)
     {
         if (Positie.x < 0 || Positie.y < 0)
             throw new Exception("Kan niet tekenen in het negatieve!");
@@ -49,15 +46,43 @@ class Kaart
         hoogte = hoog;
     }
 
-    // kan nog iets moeten returnen
     public void VoegPadToe(Pad pad)
+    {
+        SchrijfOp(pad.van, "#");
+        Coordinaat start = pad.van;
+        Coordinaat end = pad.naar;
+        //https://stackoverflow.com/questions/57871642/how-to-yield-coordinate-pairs-from-a-start-point-to-an-end-point
+
+        int dx = Math.Sign(end.x - start.x);
+        int dy = Math.Sign(end.y - start.y);
+        int steps = Math.Max(Math.Abs(end.x - start.x), Math.Abs(end.y - start.y)) + 1;
+
+        int x = start.x;
+        int y = start.y;
+
+        for (int i = 1; i <= steps; ++i)
+        {
+            x = x == end.x ? end.x : x + dx;
+            y = y == end.y ? end.y : y + dy;
+
+            var huidig = new Coordinaat(x, y);
+            SchrijfOp(huidig, "=");
+        }
+
+        SchrijfOp(pad.naar, "#");
+    }
+
+    public void VoegItemToe(Attractie attractie)
     {
 
     }
 
-    public void VoegItemToe()
+    public void SchrijfOp(Coordinaat Positie, string Text)
     {
-
+        if (Positie.x < 0 || Positie.y < 0)
+            throw new Exception("Kan niet tekenen in het negatieve!");
+        Console.SetCursorPosition(Positie.x, Positie.y);
+        Console.WriteLine(Text);
     }
 }
 class Attractie
@@ -77,27 +102,14 @@ class Attractie
 
 class Pad
 {
-    public Coordinaat van
-    {
-        get { return van; }
-        set
-        {
-            van = value;
-            lengteBerekend = null; //als variabele van verandert wordt lengteBerekend naar null gezet
-        }
-    }
-    public Coordinaat naar
-    {
-        get { return naar; }
-        set
-        {
-            naar = value;
-            lengteBerekend = null; //als variabele naar verandert wordt lengteBerekend naar null gezet
-        }
-    }
     private float? lengteBerekend;
+    public ConsoleTekener tekener { get; set; }
+    public Coordinaat van { get; set; }
+    public Coordinaat naar { get; set; }
 }
 
+//zelf werkend krijgen niet kijken naar de opdracht eisen
+//tekent nu de van en naar locaties iets verzinnen zodat het tussen de van en naar een rij aan # tekent, while loop?
 class Starter
 {
     public static void Main(string[] args)
@@ -105,7 +117,7 @@ class Starter
         Kaart k = new Kaart(30, 30);
         Pad p1 = new Pad();
         p1.van = new Coordinaat(2, 5);
-        p1.van = new Coordinaat(12, 30);
+        p1.naar = new Coordinaat(12, 30);
         k.VoegPadToe(p1);
         Pad p2 = new Pad();
         p2.van = new Coordinaat(26, 4);
@@ -114,8 +126,8 @@ class Starter
         k.VoegItemToe(new Attractie(k, new Coordinaat(15, 15)));
         k.VoegItemToe(new Attractie(k, new Coordinaat(20, 15)));
         k.VoegItemToe(new Attractie(k, new Coordinaat(5, 18)));
-        k.TekenConsole(new ConsoleTekener());
-        new ConsoleTekener().SchrijfOp(new Coordinaat(0, k.Hoogte + 1), "Deze kaart is schaal 1:1000");
+        //k.TekenConsole(new ConsoleTekener());
+        new ConsoleTekener().SchrijfOp(new Coordinaat(0, k.hoogte + 1), "Deze kaart is schaal 1:1000");
         System.Console.Read();
     }
 }

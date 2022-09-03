@@ -1,0 +1,15 @@
+D:\Users\user\Documents\WPFW_portfolio\Opdracht_week_1\bin\Debug\net6.0\Opdracht week 1.exe
+D:\Users\user\Documents\WPFW_portfolio\Opdracht_week_1\bin\Debug\net6.0\Opdracht week 1.deps.json
+D:\Users\user\Documents\WPFW_portfolio\Opdracht_week_1\bin\Debug\net6.0\Opdracht week 1.runtimeconfig.json
+D:\Users\user\Documents\WPFW_portfolio\Opdracht_week_1\bin\Debug\net6.0\Opdracht week 1.dll
+D:\Users\user\Documents\WPFW_portfolio\Opdracht_week_1\bin\Debug\net6.0\Opdracht week 1.pdb
+D:\Users\user\Documents\WPFW_portfolio\Opdracht_week_1\obj\Debug\net6.0\Opdracht week 1.csproj.AssemblyReference.cache
+D:\Users\user\Documents\WPFW_portfolio\Opdracht_week_1\obj\Debug\net6.0\Opdracht week 1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\user\Documents\WPFW_portfolio\Opdracht_week_1\obj\Debug\net6.0\Opdracht week 1.AssemblyInfoInputs.cache
+D:\Users\user\Documents\WPFW_portfolio\Opdracht_week_1\obj\Debug\net6.0\Opdracht week 1.AssemblyInfo.cs
+D:\Users\user\Documents\WPFW_portfolio\Opdracht_week_1\obj\Debug\net6.0\Opdracht week 1.csproj.CoreCompileInputs.cache
+D:\Users\user\Documents\WPFW_portfolio\Opdracht_week_1\obj\Debug\net6.0\Opdracht week 1.dll
+D:\Users\user\Documents\WPFW_portfolio\Opdracht_week_1\obj\Debug\net6.0\refint\Opdracht week 1.dll
+D:\Users\user\Documents\WPFW_portfolio\Opdracht_week_1\obj\Debug\net6.0\Opdracht week 1.pdb
+D:\Users\user\Documents\WPFW_portfolio\Opdracht_week_1\obj\Debug\net6.0\Opdracht week 1.genruntimeconfig.cache
+D:\Users\user\Documents\WPFW_portfolio\Opdracht_week_1\obj\Debug\net6.0\ref\Opdracht week 1.dll
